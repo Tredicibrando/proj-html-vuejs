@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed_bar">
+    <nav class="fixed_bar">
         <div class="container">
             <div class="row">
                 <div class="hour">
@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
 </template>
 
 <script>
@@ -35,7 +35,6 @@
 $limed: #3d4955;
 
 .fixed_bar{
-    position: fixed;
     background-color: $limed;
     width: 100%;
     color: white;
@@ -79,6 +78,7 @@ $limed: #3d4955;
                 .fa-phone, 
                 .fa-envelope{
                     margin-right: 10px;
+                    margin-left: 10px;
                 }
 
                 .social{
