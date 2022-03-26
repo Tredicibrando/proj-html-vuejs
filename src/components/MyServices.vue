@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="services">
         <div class="container">
             <div class="services_wrapper">
                 <h4 class="subtitle">
@@ -81,10 +81,10 @@ section{
     .container{
         width: 1240px;
         margin:  0 auto;
-        padding: 35px 0;
+        padding: 100px 0;
 
         .services_wrapper{
-            padding: 40px 0;
+            padding-bottom: 40px;
             color: $limed;
 
             .title{

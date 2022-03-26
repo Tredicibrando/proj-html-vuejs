@@ -8,7 +8,7 @@
 
             <ul class="list_wrapper">
                 <li v-for="(element,i) in navbar" :key="i" class="list_item">
-                    <a href="href">{{element.item}}</a>
+                    <a :href="element.href">{{element.item}}</a>
                 </li>
 
                 <input class="btn-green" type="button" value="Get in touch">
@@ -37,7 +37,7 @@
                     item:'About'
                 },
                 {
-                    href: '#',
+                    href: '#services',
                     item:'Services'
                 },
                 {
