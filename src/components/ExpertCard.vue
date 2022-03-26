@@ -1,13 +1,13 @@
 <template>
      <div class="card">
         <figure class="img_wrapper">
-            <img src="../assets/img/team-1.jpg" alt="">
+            <img :src="element.img" alt="">
         </figure>
         <div class="text_wrapper">
             <h4 class="card_title">
-             David Cooper
+             {{element.name}}
             </h4>
-            <p class="card_subtitle">CTO and Co-Founder</p>
+            <p class="card_subtitle">{{element.role}}</p>
 
             <div class="icon_wrapper">
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -33,7 +33,7 @@
 
 <style lang="scss" scoped>
 .card{
-    width: calc((100%/2) - 20px);
+    width: calc((100% / 2) - 20px);
     display: flex;
     gap: 10px;
 
@@ -42,7 +42,7 @@
         border-radius: 3px;
         overflow: hidden;
         width: 85px;
-        height: 120px;
+        height: 110px;
 
         img{
             width: 100%;

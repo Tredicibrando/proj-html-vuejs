@@ -17,12 +17,32 @@
                         </p>
                     </div>
 
-                    <div class="card-wrapper">
-                       <ExpertCard :element="element" />
+                    <div class="card_wrapper">
+                       <ExpertCard v-for="(element,i) in cardArray" :key="i" :element="element" />
                     </div>
                 </div>
-                <div class="col-30">
 
+                <div class="col-30">
+                    <div class="president">
+                        <h4 class="president_title">
+                            President Speech
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus iste pariatur incidunt explicabo consequatur dolorum? Libero, dolorum! Quis omnis soluta placeat illo aliquam animi odit?
+                        </p>
+                        <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus iste pariatur incidunt explicabo consequatur dolorum? Libero, dolorum! Quis omnis soluta placeat illo aliquam animi odit?
+                        </p>
+                        <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+                        <br>
+                        <h4 class="president_name">
+                            T.Johnson
+                        </h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -46,19 +66,19 @@ import ExpertCard from '@/components/ExpertCard.vue'
                         role: 'Cto & Co-Founder'
                     },
                     {
-                        img: require('../assets/img/team-2.jpg'),
+                        img: require('../assets/img/team-3.jpg'),
                         name: 'Oliver Jones',
                         role: 'Chief Procurement'
                     },
                     {
-                        img: require('../assets/img/team-3.jpg'),
-                        name: 'David Cooper',
-                        role: 'Cto & Co-Founder'
+                        img: require('../assets/img/team-2.jpg'),
+                        name: 'Emma Lopez',
+                        role: 'Chief Marketing'
                     },
                     {
                         img: require('../assets/img/team-4.jpg'),
-                        name: 'David Cooper',
-                        role: 'Cto & Co-Founder'
+                        name: 'T.Johnson',
+                        role: 'CEO & President'
                     },
 
                 ],
@@ -107,6 +127,7 @@ import ExpertCard from '@/components/ExpertCard.vue'
                     .paragraph{
                         width: 90%;
                         margin-bottom: 35px;
+                        color: #ddd;
                     }
 
                 }
@@ -114,11 +135,50 @@ import ExpertCard from '@/components/ExpertCard.vue'
                 .card_wrapper{
                     display: flex;
                     gap: 20px;
+                    flex-wrap: wrap;
                 }
             }
 
             .col-30{
                 width: 30%;
+                padding-left: 25px;
+
+                .president{
+                    margin-top: 25px;
+                    border-radius: 3px;
+                    background-color: #058283;
+                    padding: 15px;
+                    color: white;
+                    height: max-content;
+                    position: relative;
+
+                    .president_title{
+                        font-size: 18px;
+                        margin-bottom: 10px;
+
+                        
+                    }
+
+                    p{
+                        color: #ddd;
+                        font-size: 14px;
+                    }
+
+                    .president_name{
+                        margin-top: 35px;
+                    }
+
+                    .president_name::after{
+                        content: ' ”  ';
+                        display: block;
+                        font-size: 60px;
+                        color: rgba($color: #055858, $alpha: 1.0);
+                        position: absolute;
+                        right: 20px;
+                        bottom: -10px;
+                        z-index: 40;
+                    }
+                }
             }
         }
 
