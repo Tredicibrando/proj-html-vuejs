@@ -75,7 +75,7 @@ $fountain_blue: #45bbbc;
 
 .company{
     background-color: #111117;
-    padding: 40px 0;
+    padding: 100px 0;
 }
 
 .container{

@@ -25,15 +25,8 @@
                     </ul>
                     <input class="footer-btn" type="button" value="Get in Touch">
                 </div>
-                <div>
-                    <div class="col-25">
-                        <h3>About</h3>
-                        <ul>
-                            <li>list item</li>
-                        </ul>
-                    </div>
-                    <div class="col-25"></div>
-                    <div class="col-25"></div>
+                <div class="right_footer">
+                   <FooterCard />
                 </div>
             </div>
         </div>
@@ -45,11 +38,13 @@
 <script>
 
 import FooterBar from '@/components/FooterBar.vue'
+import FooterCard from '@/components/FooterCard.vue'
 
     export default {
         name: 'MyFooter',
         components:{
             FooterBar,
+            FooterCard,
         }
     }
 </script>
@@ -57,8 +52,10 @@ import FooterBar from '@/components/FooterBar.vue'
 <style lang="scss" scoped>
 .footer{
     background-color: #111117;
-    padding: 100px 0;
+    padding-top: 100px;
     color: white;
+    display: flex;
+    flex-direction: column;
 
     .container{
         width: 1240px;
@@ -111,6 +108,12 @@ import FooterBar from '@/components/FooterBar.vue'
                     background-color: transparent;
                     border-radius: 3px;
                 }
+            }
+
+            .right_footer{
+                width: 100%;
+                display: flex;
+                gap: 25px;
             }
 
            
